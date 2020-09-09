@@ -1,9 +1,12 @@
 import React from 'react';
 
-function MessageInfo() {
+function MessageInfo({ messages }) {
+  if(messages.type !== "info") {
+    return null;
+  }
   return (
     <div className="message-info">
-      Пропущенный вызов
+      {messages.content}
     </div>
   );
 }

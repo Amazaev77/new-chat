@@ -8,9 +8,8 @@ function RecentChats() {
   const loading = useSelector((state) => state.contacts.loading);
   const enteredText = useSelector((state) => state.contacts.enteredText);
 
-  const filteredContacts = contacts.filter(
-    (item) =>
-      item.fullname.toLowerCase().indexOf(enteredText.toLowerCase()) !== -1
+  const filteredContacts = contacts.filter(item => (
+      item.fullname.toLowerCase().indexOf(enteredText.toLowerCase()) !== -1)
   );
 
   return (

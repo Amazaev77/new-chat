@@ -10,7 +10,7 @@ function Contact({ contact }) {
     dispatch(loadChat(contact._id, profileId));
   }
   return (
-    <div 
+    <div
       className="contact"
       onClick={handleChat}
     >

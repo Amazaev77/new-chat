@@ -3,12 +3,12 @@ import MessageInBox from "./MessageInBox";
 import MessageOutBox from "./MessageOutBox";
 import MessageInfo from "./MessageInfo";
 
-function Message() {
+function Message({ messages }) {
   return (
     <div className="message">
-      <MessageInBox />
-      <MessageOutBox />
-      <MessageInfo />
+      <MessageInBox messages={messages}/>
+      <MessageOutBox messages={messages}/>
+      <MessageInfo messages={messages}/>
     </div>
   );
 }

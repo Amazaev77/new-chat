@@ -1,6 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { showSearchInput, setSearchLine, clearInput } from "../../redux/actions/chat";
+import { showSearchInput, setSearchLine, clearInput } from "../../../redux/actions/chat";
 
 function SearchMessage() {
   const showSearch = useSelector((state) => state.chat.showSearch);
