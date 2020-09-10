@@ -1,5 +1,4 @@
 import React from 'react';
-import preloader from "./preloader.svg";
 import { useSelector } from "react-redux";
 
 function Fullname() {
@@ -12,14 +11,18 @@ function Fullname() {
       <div className="name-container">
         <div className="name-chat">
           {loading ? (
-            <span>
-              <img className="preloader" src={preloader} alt="preloader"/>
-              Updating...
-            </span>
-          ): (
+            <div className="updating-box">
+              <div className="autorenew-box">
+                <span className="autorenew material-icons">
+                  autorenew
+                </span>
+              </div>
+
+              <div className="updating">Updating...</div>
+            </div>
+          ) : (
             userdata.fullname
           )}
-
         </div>
         <div className="online-chat"></div>
       </div>
