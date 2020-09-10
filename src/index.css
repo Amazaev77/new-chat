@@ -109,6 +109,7 @@ html {
   overflow-y: scroll;
   flex-direction: column;
   height: 100vh;
+  justify-content: space-between;
 }
 .inner-main::-webkit-scrollbar {
   width: 0;
@@ -187,7 +188,7 @@ html {
 .setting {
   text-align: end;
 }
-.message-in-box {
+.message-out-box {
   padding: 13px 10px 3px 10px;
   background-color: #632df8;
   color: #f3effe;
@@ -198,27 +199,23 @@ html {
   align-self: flex-end;
   box-sizing: border-box;
 }
-
-.message-in {
+.message-out {
   font-weight: 500;
 }
-.in-time-box {
+.out-time-box {
   font-size: 11px;
   font-weight: 550;
   display: flex;
   justify-content: flex-end;
 }
-.in-time {
+.out-time {
   align-self: flex-end;
   margin-right: 8px;
 }
-.message-out-box {
-
-}
-.inner-message-out {
+.inner-message-in {
   display: flex;
 }
-.message-out {
+.message-in {
   background-color: #f1f5f9;
   padding: 13px 10px 3px 10px;
   box-sizing: border-box;
@@ -228,7 +225,7 @@ html {
   min-width: 190px;
   word-break: break-all;
 }
-.out-time {
+.in-time {
   font-size: 12px;
   font-weight: 600;
   text-align: end;
@@ -316,34 +313,17 @@ html {
   margin-right: 3px;
 }
 @keyframes preloading {
-  0% {
-    -webkit-transform: rotate(0deg);
-  }
-  10% {
-    -webkit-transform: rotate(45deg);
-  }
-  25% {
-    -webkit-transform: rotate(90deg);
-  }
-  40% {
-    -webkit-transform: rotate(130deg);
-  }
-  50% {
-    -webkit-transform: rotate(180deg);
-  }
-  65% {
-    -webkit-transform: rotate(220deg);
-  }
-  75% {
-    -webkit-transform: rotate(270deg);
-  }
-  90% {
-    -webkit-transform: rotate(330deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-
+  0% {-webkit-transform: rotate(0deg);}
+  5% {-webkit-transform: rotate(20deg);}
+  10% {-webkit-transform: rotate(45deg);}
+  15% {-webkit-transform: rotate(70deg);}
+  25% {-webkit-transform: rotate(90deg);}
+  40% {-webkit-transform: rotate(130deg);}
+  50% {-webkit-transform: rotate(180deg);}
+  65% {-webkit-transform: rotate(220deg);}
+  75% {-webkit-transform: rotate(270deg);}
+  90% {-webkit-transform: rotate(330deg);}
+  100% {-webkit-transform: rotate(360deg);}
 }
 .big-avatar {
   width: 65px;

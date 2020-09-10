@@ -1,11 +1,11 @@
 const initialState = {
   loading: true,
   messages: [],
-  showChat: true,
   showSearch: false,
   searchLine: "",
   messageLine: "",
   showBar: false,
+  // showChat: true
 }
 
 export default function chat(state = initialState, action) {
@@ -14,9 +14,8 @@ export default function chat(state = initialState, action) {
       return {
         ...state,
         loading: true,
-        showChat: false
+        // showChat: false
       }
-
     case 'chat/load/success':
       return {
         ...state,

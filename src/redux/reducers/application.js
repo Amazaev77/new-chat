@@ -1,5 +1,6 @@
 const initialState = {
-  opened: null
+  opened: null,
+  showChat: true
 }
 
 export default function application(state = initialState, action) {
@@ -8,6 +9,11 @@ export default function application(state = initialState, action) {
       return {
         ...state,
         opened: action.payload
+      }
+    case 'chat/load/start':
+      return {
+        ...state,
+        showChat: false
       }
     default:
       return state;

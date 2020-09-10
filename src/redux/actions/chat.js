@@ -11,6 +11,8 @@ export function loadChat(id, myId) {
           payload: json
         })
       })
+
+      
   }
 }
 export function showSearchInput() {

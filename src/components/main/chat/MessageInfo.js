@@ -1,12 +1,12 @@
 import React from 'react';
 
-function MessageInfo({ messages }) {
-  if(messages.type !== "info") {
+function MessageInfo({ message }) {
+  if(message.type !== "info") {
     return null;
   }
   return (
     <div className="message-info">
-      {messages.content}
+      {message.content}
     </div>
   );
 }

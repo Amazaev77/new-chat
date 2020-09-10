@@ -1,17 +1,21 @@
 import React from 'react';
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 
-function MessageInBox({ messages }) {
-  const profileId = useSelector(state => state.profile._id);
-  if(messages.fromUserId !== profileId) {
-    return null;
-  }
+function MessageInBox({ message }) {
+  console.log(message.type);
+  const opened = useSelector(state => state.application.opened);
+  const userdata = useSelector(state => state.contacts.contacts.find(item => item._id === opened));
+
   return (
     <div className="message-in-box">
-      <div className="message-in">{messages.content}</div>
-      <div className="in-time-box">
-        <span className="in-time">10:30</span>
-        <span className="check material-icons">done_all</span>
+      <div className="inner-message-in">
+        <div className="avatar-chat">
+          {userdata.fullname[0]}
+        </div>
+        <div className="message-in">
+          {message.content}
+          <div className="in-time">10:20</div>
+        </div>
       </div>
     </div>
   );

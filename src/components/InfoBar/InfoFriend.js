@@ -3,8 +3,9 @@ import {useSelector} from "react-redux";
 
 function InfoFriend() {
   const opened = useSelector(state => state.application.opened);
+  
   const userdata = useSelector(state => state.contacts.contacts.find(item => item._id === opened));
-
+  console.log(userdata);
   return (
     <div className="info-friend">
       <div className="big-avatar">

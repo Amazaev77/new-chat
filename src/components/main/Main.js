@@ -5,7 +5,7 @@ import Footer from './Footer';
 import {useSelector} from "react-redux";
 
 function Main() {
-  const showChat = useSelector(state => state.chat.showChat);
+  const showChat = useSelector(state => state.application.showChat);
 
   if(showChat) {
     return (

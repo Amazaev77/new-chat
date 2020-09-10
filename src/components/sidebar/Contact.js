@@ -5,9 +5,12 @@ import { loadChat } from '../../redux/actions/chat';
 function Contact({ contact }) {
   const dispatch = useDispatch();
   const profileId = useSelector(state => state.profile._id);
+  const opened = useSelector(state => state.application.opened);
 
   function handleChat() {
-    dispatch(loadChat(contact._id, profileId));
+    if(opened !== contact._id) {
+      dispatch(loadChat(contact._id, profileId));
+    }
   }
   return (
     <div

@@ -1,24 +1,12 @@
-import React from 'react';
-import { useSelector } from "react-redux";
+import React from 'react';;
 
-function MessageOutBox({ messages }) {
-  const profileId = useSelector(state => state.profile._id);
-  const opened = useSelector(state => state.application.opened);
-  const userdata = useSelector(state => state.contacts.contacts.find(item => item._id === opened));
-
-  if(messages.fromUserId === profileId) {
-    return null;
-  }
+function MessageOutBox({ message }) {
   return (
     <div className="message-out-box">
-      <div className="inner-message-out">
-        <div className="avatar-chat">
-          {userdata.fullname[0]}
-        </div>
-        <div className="message-out">
-          {messages.content}
-          <div className="out-time">10:20</div>
-        </div>
+      <div className="message-out">{message.content}</div>
+      <div className="out-time-box">
+        <span className="out-time">10:30</span>
+        <span className="check material-icons">done_all</span>
       </div>
     </div>
   );
