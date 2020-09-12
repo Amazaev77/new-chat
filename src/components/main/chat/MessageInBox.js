@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from "react-redux";
+import moment from 'moment';
 
 function MessageInBox({ message }) {
   console.log(message.type);
@@ -14,7 +15,7 @@ function MessageInBox({ message }) {
         </div>
         <div className="message-in">
           {message.content}
-          <div className="in-time">10:20</div>
+          <div className="in-time">{moment(message.time).format("HH:mm")}</div>
         </div>
       </div>
     </div>

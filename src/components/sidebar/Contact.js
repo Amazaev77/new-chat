@@ -1,17 +1,23 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { loadChat } from '../../redux/actions/chat';
+import LastMessage from './LastMessage';
+import moment from 'moment';
 
 function Contact({ contact }) {
   const dispatch = useDispatch();
   const profileId = useSelector(state => state.profile._id);
   const opened = useSelector(state => state.application.opened);
+  const time = useSelector(state => (
+    state.chat.messages.map(item => item.time)
+  ));
 
   function handleChat() {
     if(opened !== contact._id) {
       dispatch(loadChat(contact._id, profileId));
     }
   }
+
   return (
     <div
       className="contact"
@@ -24,12 +30,10 @@ function Contact({ contact }) {
         <div className="name">
           {contact.fullname}
         </div>
-        <div className="last-message">
-          {contact.hasOwnProperty("lastMessage") && contact.lastMessage.content}
-        </div>
+        <LastMessage lastMessage={contact.lastMessage}/>
       </div>
       <div className="time-last-message">
-        5 min
+        {moment(time).format("HH:mm")}
       </div>
     </div>
   )

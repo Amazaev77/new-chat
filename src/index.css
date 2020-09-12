@@ -99,6 +99,7 @@ html {
 }
 .last-message {
   color: #8f9090;
+  max-width: 170px;
 }
 .main {
   flex: 1;

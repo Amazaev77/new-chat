@@ -1,4 +1,4 @@
-import nodeChat from "./nodeChat";
+import nodeChat from "../../utils/nodeChat";
 export function loadChat(id, myId) {
   return dispatch => {
     dispatch({type: 'chat/load/start'});
