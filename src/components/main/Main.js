@@ -17,7 +17,7 @@ function Main() {
 
   return (
     <div className="main">
-      <div className="inner-main">
+      <div className="inner-main" id="chat">
         <Header />
         <Chat />
         <Footer />

@@ -159,10 +159,10 @@ html {
   display: flex;
 }
 .search-message {
-  width: 270px;
+  flex: 1;
 }
 .setting {
-  width: 300px;
+  flex: 1.1;
 }
 .clear-input {
   font-size: 18px;
@@ -343,8 +343,9 @@ html {
 .videocam {
   margin: 0 30px;
 }
-.call:hover, .videocam:hover, .email:hover {
-  color: #89a3c4;
+.call:hover, .videocam:hover, .email:hover,
+.instagram:hover .fa-instagram, .twitter:hover .fa-twitter, .facebook:hover .fa-facebook-f {
+  color: #7c98bb;
 } 
 .ico {
   margin-right: 10px;

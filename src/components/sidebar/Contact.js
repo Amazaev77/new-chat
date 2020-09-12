@@ -25,7 +25,7 @@ function Contact({ contact }) {
           {contact.fullname}
         </div>
         <div className="last-message">
-          последнее сообщ
+          {contact.hasOwnProperty("lastMessage") && contact.lastMessage.content}
         </div>
       </div>
       <div className="time-last-message">

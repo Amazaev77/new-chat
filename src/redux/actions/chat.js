@@ -1,3 +1,4 @@
+import nodeChat from "./nodeChat";
 export function loadChat(id, myId) {
   return dispatch => {
     dispatch({type: 'chat/load/start'});
@@ -10,9 +11,8 @@ export function loadChat(id, myId) {
           type: 'chat/load/success',
           payload: json
         })
+        nodeChat();
       })
-
-      
   }
 }
 export function showSearchInput() {
