@@ -8,9 +8,14 @@ function Contact({ contact }) {
   const dispatch = useDispatch();
   const profileId = useSelector(state => state.profile._id);
   const opened = useSelector(state => state.application.opened);
-  const time = useSelector(state => (
-    state.chat.messages.map(item => item.time)
-  ));
+  const time = contact.lastMessage !== undefined && moment(contact.lastMessage.time).format("HH:mm");
+
+
+
+  let classContact = "contact";
+  if(opened === contact._id) {
+    classContact += " bgc-white";
+  }
 
   function handleChat() {
     if(opened !== contact._id) {
@@ -20,7 +25,7 @@ function Contact({ contact }) {
 
   return (
     <div
-      className="contact"
+      className={classContact}
       onClick={handleChat}
     >
       <div className="avatar">
@@ -33,7 +38,7 @@ function Contact({ contact }) {
         <LastMessage lastMessage={contact.lastMessage}/>
       </div>
       <div className="time-last-message">
-        {moment(time).format("HH:mm")}
+        {time}
       </div>
     </div>
   )

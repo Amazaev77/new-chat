@@ -13,18 +13,13 @@ function Fullname() {
           {loading ? (
             <div className="updating-box">
               <div className="autorenew-box">
-                <span className="autorenew material-icons">
-                  autorenew
-                </span>
+                <span className="autorenew material-icons">autorenew</span>
               </div>
-
               <div className="updating">Updating...</div>
             </div>
-          ) : (
-            userdata.fullname
-          )}
+          ) : (userdata.fullname)}
         </div>
-        <div className="online-chat"></div>
+        {userdata.online !== undefined && <div className="online-chat"></div>}
       </div>
     </div>
   );
