@@ -1,4 +1,5 @@
 import nodeChat from "../../utils/nodeChat";
+
 export function loadChat(id, myId) {
   return dispatch => {
     dispatch({type: 'chat/load/start'});
@@ -27,14 +28,40 @@ export function setSearchLine(value) {
 export function clearInput() {
   return { type: 'input/clear' };
 }
-export function sendMessage(value) {
+export function writeMessage(value) {
   return {
-    type: 'message/send',
+    type: 'message/write',
     payload: value
   };
 }
 export function showBar() {
   return {
     type: 'bar/show'
+  }
+}
+export function  sendMessage(myId, contactId, content) {
+  return dispatch => {
+    dispatch({type: 'message/send/start'});
+
+    fetch('http://151.248.117.7:8001/api/messages', {
+      method: "POST",
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        myId,
+        contactId,
+        content,
+        type: 'text'
+      })
+    })
+      .then(response => response.json())
+      .then(json => {
+        dispatch({
+          type: 'message/send/success',
+          payload: json
+        })
+      })
   }
 }

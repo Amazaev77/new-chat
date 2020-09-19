@@ -1,6 +1,8 @@
 import React from 'react';
-import Message from './Message';
+import Message from '../message';
 import { useSelector } from "react-redux";
+import './chat.css';
+
 
 function Chat() {
   const enteredText = useSelector(state => state.chat.searchLine);

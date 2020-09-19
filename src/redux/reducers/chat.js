@@ -5,7 +5,7 @@ const initialState = {
   searchLine: "",
   messageLine: "",
   showBar: false,
-  // showChat: true
+  waitingMessage: true
 }
 
 export default function chat(state = initialState, action) {
@@ -14,7 +14,6 @@ export default function chat(state = initialState, action) {
       return {
         ...state,
         loading: true,
-        // showChat: false
       }
     case 'chat/load/success':
       return {
@@ -37,7 +36,7 @@ export default function chat(state = initialState, action) {
         ...state, 
         searchLine: ""
       }
-    case 'message/send':
+    case 'message/write':
       return {
         ...state,
         messageLine: action.payload
@@ -46,6 +45,21 @@ export default function chat(state = initialState, action) {
       return {
         ...state,
         showBar: !state.showBar
+      }
+    case 'message/send/start':
+      return {
+        ...state,
+        waitingMessage: true
+      }
+    case 'message/send/success':
+      return {
+        ...state,
+        waitingMessage: false,
+        messages: [
+          ...state.messages,
+          action.payload
+        ],
+        messageLine: "",
       }
     default:
       return state;

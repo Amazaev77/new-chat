@@ -1,0 +1,8 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+.app {
+    max-width: 1920px;
+    margin: auto;
+    display: flex;
+}

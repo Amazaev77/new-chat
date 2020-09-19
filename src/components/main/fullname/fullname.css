@@ -1,0 +1,47 @@
+.fullname {
+    flex: 1;
+}
+.updating-box {
+    display: flex;
+}
+.updating {
+    align-self: center;
+}
+.autorenew {
+    font-size: 23px;
+    animation-name: preloading;
+    animation-duration: 650ms;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+}
+.autorenew-box {
+    margin-right: 3px;
+}
+@keyframes preloading {
+    0% {-webkit-transform: rotate(0deg);}
+    5% {-webkit-transform: rotate(20deg);}
+    10% {-webkit-transform: rotate(45deg);}
+    15% {-webkit-transform: rotate(70deg);}
+    25% {-webkit-transform: rotate(90deg);}
+    40% {-webkit-transform: rotate(130deg);}
+    50% {-webkit-transform: rotate(180deg);}
+    65% {-webkit-transform: rotate(220deg);}
+    75% {-webkit-transform: rotate(270deg);}
+    90% {-webkit-transform: rotate(330deg);}
+    100% {-webkit-transform: rotate(360deg);}
+}
+.name-chat {
+    font-weight: 600;
+    margin-right: 8px;
+}
+.name-container {
+    display: flex;
+    justify-content: center;
+}
+.online-chat {
+    width: 8px;
+    height: 8px;
+    align-self: center;
+    border-radius: 100%;
+    background-color: #55c661;
+}
