@@ -62,6 +62,8 @@ export function  sendMessage(myId, contactId, content) {
           type: 'message/send/success',
           payload: json
         })
+
+        nodeChat();
       })
   }
 }

@@ -30,9 +30,10 @@ function Contact({ contact }) {
       className={classContact}
       onClick={handleChat}
     >
-      {contact.online !== undefined && <div className="online-contact"></div>}
+      
       <div className="avatar">
         {picture}
+        {contact.online && <div className="online-contact"></div>}
       </div>
       <div className="name-mess">
         <div className="name">

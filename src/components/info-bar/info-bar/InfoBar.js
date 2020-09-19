@@ -20,15 +20,21 @@ function InfoBar() {
           <div className="messengers">
             <div className="instagram">
               <i className="ico fab fa-instagram"></i>
-              <span className="nick-messenger">{userdata && userdata.socials.instagram}</span>
+              <span className="nick-messenger">
+                {userdata.socials !== undefined && userdata.socials.instagram}
+              </span>
             </div>
             <div className="twitter">
               <i className="ico fab fa-twitter"></i>
-              <span className="nick-messenger">{userdata && userdata.socials.twitter}</span>
+              <span className="nick-messenger">
+                {userdata.socials !== undefined && userdata.socials.twitter}
+                </span>
             </div>
             <div className="facebook">
               <i className="ico fab fa-facebook-f"></i>
-              <span className="nick-messenger">{userdata && userdata.socials.facebook}</span>
+              <span className="nick-messenger">
+                {userdata.socials !== undefined && userdata.socials.facebook}
+                </span>
             </div>
           </div>
         </div>

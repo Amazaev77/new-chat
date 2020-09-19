@@ -11,7 +11,6 @@ function Setting() {
 
   useHotkeys('shift+p', () => dispatch(showBar()));
 
-
   return (
     <div className="setting">
       <span
