@@ -39,6 +39,7 @@
 }
 .bgc-white {
     background-color: #fff;
+    box-shadow: 0 -0.1px 5px rgba(194, 191, 191, 0.226);
 }
 .online-contact {
     width: 5px;
