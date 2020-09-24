@@ -1,4 +1,4 @@
-import nodeChat from "../../utils/nodeChat";
+// import nodeChat from "../../utils/nodeChat";
 
 export function loadChat(id, myId) {
   return dispatch => {
@@ -12,7 +12,7 @@ export function loadChat(id, myId) {
           type: 'chat/load/success',
           payload: json
         })
-        nodeChat();
+        // nodeChat();
       })
   }
 }
@@ -63,7 +63,7 @@ export function  sendMessage(myId, contactId, content) {
           payload: json
         })
 
-        nodeChat();
+        // nodeChat();
       })
   }
 }

@@ -1,0 +1,8 @@
+.no-selected {
+    background-color: rgba(182, 181, 181, 0.171);
+    margin: auto;
+    text-align: center;
+    width: 315px;
+    border-radius: 20px;
+    padding: 6px 0;
+}

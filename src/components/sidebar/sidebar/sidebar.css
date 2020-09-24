@@ -4,6 +4,7 @@
     width: 330px;
     box-sizing: border-box;
     overflow-y: scroll;
+    height: 100vh;
 }
 .sidebar::-webkit-scrollbar {
     width: 0;

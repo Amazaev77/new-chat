@@ -20,7 +20,7 @@ function Fullname() {
             </div>
           ) : (userdata.fullname)}
         </div>
-        {userdata.online && <div className="online-chat"></div>}
+        {/*{userdata.online && <div className="online-chat"></div>}*/}
       </div>
     </div>
   );

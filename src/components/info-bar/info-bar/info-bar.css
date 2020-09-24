@@ -30,7 +30,6 @@
     width: 300px;
     background-color: #f7f8f9;
     padding: 60px 25px 0 25px;
-    height: 100vh;
     transition-property: width;
     animation: show-bar 300ms forwards;
     animation-timing-function: ease-in;
