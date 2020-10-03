@@ -3,7 +3,6 @@ import Message from '../message';
 import { useSelector } from "react-redux";
 import './chat.css';
 
-
 function Chat() {
   const enteredText = useSelector(state => state.chat.searchLine);
   const messages = useSelector(state => state.chat.messages.filter(item => (
@@ -19,7 +18,7 @@ function Chat() {
     <div className="chat">
       {messages.map(item => (
         <div className="message">
-          <Message message={item}/>
+          <Message key={item._id} message={item}/>
         </div>
       ))}
     </div>

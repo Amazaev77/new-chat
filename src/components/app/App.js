@@ -13,7 +13,6 @@ function App() {
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.contacts.loading);
   const profile = useSelector(state => state.profile.loading);
-  const showChat = useSelector(state => state.application.showChat);
 
   useEffect(() => {
     dispatch(loadContacts());
@@ -26,13 +25,12 @@ function App() {
 
   return (
     <div className="app">
-      <Sidebar />
-      <Router>
-        <Route path="/" component={NoSelected}/>
-        <Route path="/main" component={Main}/>
-      </Router>
-      {/*{showChat ? <NoSelected /> : <Main />}*/}
-      <InfoBar />
+        <Router>
+          <Sidebar />
+          <Route path="/" exact render={() => <NoSelected />} />
+          <Route path="/main/:id" exact component={Main} />
+          <InfoBar />
+        </Router>
     </div>
   );
 }

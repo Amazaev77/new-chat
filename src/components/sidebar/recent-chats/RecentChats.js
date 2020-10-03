@@ -27,7 +27,7 @@ function RecentChats() {
         </div>
       ) : (
         filteredContacts.map((item) => (
-          <Contact key={item._id} contact={item} />
+            <Contact key={item._id} contact={item} />
         ))
       )}
     </div>

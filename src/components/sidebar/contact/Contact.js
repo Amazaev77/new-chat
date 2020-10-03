@@ -4,6 +4,7 @@ import { loadChat } from '../../../redux/actions/chat';
 import LastMessage from '../last-message/LastMessage';
 import moment from 'moment';
 import './contact.css';
+import {Link} from "react-router-dom";
 
 function Contact({ contact }) {
   const dispatch = useDispatch();
@@ -26,25 +27,26 @@ function Contact({ contact }) {
   }
 
   return (
-    <div
-      className={classContact}
-      onClick={handleChat}
-    >
-      
-      <div className="avatar">
-        {picture}
-        {contact.online && <div className="online-contact"></div>}
-      </div>
-      <div className="name-mess">
-        <div className="name">
-          {contact.fullname}
+    <Link to={`/main/${opened}`}>
+      <div
+        className={classContact}
+        onClick={handleChat}
+      >
+        <div className="avatar">
+          {picture}
+          {contact.online && <div className="online-contact"></div>}
         </div>
-        <LastMessage lastMessage={contact.lastMessage}/>
+        <div className="name-mess">
+          <div className="name">
+            {contact.fullname}
+          </div>
+          <LastMessage lastMessage={contact.lastMessage}/>
+        </div>
+        <div className="time-last-message">
+          {time}
+        </div>
       </div>
-      <div className="time-last-message">
-        {time}
-      </div>
-    </div>
+    </Link>
   )
 }
 export default Contact;
