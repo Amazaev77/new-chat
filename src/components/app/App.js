@@ -7,12 +7,13 @@ import InfoBar from '../info-bar/info-bar';
 import { loadProfile } from '../../redux/actions/profile';
 import './app.css';
 import NoSelected from "../main/NoSelected";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.contacts.loading);
   const profile = useSelector(state => state.profile.loading);
+  const showChat = useSelector(state => state.application.showChat);
+
 
   useEffect(() => {
     dispatch(loadContacts());
@@ -22,15 +23,11 @@ function App() {
   if(contacts && profile) {
     return null;
   }
-
   return (
     <div className="app">
-        <Router>
-          <Sidebar />
-          <Route path="/" exact render={() => <NoSelected />} />
-          <Route path="/main/:id" exact component={Main} />
-          <InfoBar />
-        </Router>
+      <Sidebar />
+      {showChat ? <NoSelected /> : <Main />}
+      <InfoBar />
     </div>
   );
 }

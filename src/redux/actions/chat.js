@@ -1,18 +1,18 @@
-// import nodeChat from "../../utils/nodeChat";
+import nodeChat from "../../utils/nodeChat";
 
 export function loadChat(id, myId) {
   return dispatch => {
-    dispatch({type: 'chat/load/start'});
+    dispatch({ type: 'chat/load/start' });
     dispatch({ type: 'set_opened_id', payload: id });
     
-    fetch(`http://151.248.117.7:8001/api/messages/${myId}/${id}`)
+    fetch(`https://api.intocode.ru:8001/api/messages/${myId}/${id}`)
       .then(response => response.json())
       .then(json => {
         dispatch({
           type: 'chat/load/success',
           payload: json
         })
-        // nodeChat();
+        nodeChat();
       })
   }
 }
@@ -43,7 +43,7 @@ export function  sendMessage(myId, contactId, content) {
   return dispatch => {
     dispatch({type: 'message/send/start'});
 
-    fetch('http://151.248.117.7:8001/api/messages', {
+    fetch('https://api.intocode.ru:8001/api/messages', {
       method: "POST",
       headers: {
         Accept: 'application/json',
@@ -63,7 +63,7 @@ export function  sendMessage(myId, contactId, content) {
           payload: json
         })
 
-        // nodeChat();
+        nodeChat();
       })
   }
 }

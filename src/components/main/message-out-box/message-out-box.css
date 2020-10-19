@@ -4,6 +4,7 @@
     color: #f3effe;
     max-width: 350px;
     min-width: 190px;
+    min-height: 48px;
     border-radius: 13px 13px 0;
     word-break: break-all;
     align-self: flex-end;
