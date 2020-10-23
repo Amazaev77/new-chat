@@ -1,0 +1,21 @@
+.search-contact {
+  margin-bottom: 20px;
+  position: sticky;
+  top: 0.1px;
+}
+.input-search-contact {
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0 10px 34px;
+  box-shadow: 0 -0.1px 5px rgba(194, 191, 191, 0.226);
+}
+.icon-search-sidebar {
+  color: #767676;
+  position: relative;
+  bottom: 30px;
+  left: 11px;
+  font-size: 21px;
+}

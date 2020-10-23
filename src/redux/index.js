@@ -10,11 +10,11 @@ const rootReducer = combineReducers({
   profile,
   contacts,
   chat,
-  application
-})
+  application,
+});
 const logger = createLogger({
   collapsed: true,
-  diff: true
-})
+  diff: true,
+});
 
-export const store = createStore(rootReducer, applyMiddleware(thunk, logger)); 
+export const store = createStore(rootReducer, applyMiddleware(thunk, logger));

@@ -1,20 +1,20 @@
 const initialState = {
   opened: null,
-  showChat: true
-}
+  showChat: true,
+};
 
 export default function application(state = initialState, action) {
-  switch(action.type) {
-    case 'set_opened_id':
+  switch (action.type) {
+    case "set/opened":
       return {
         ...state,
-        opened: action.payload
-      }
-    case 'chat/load/start':
+        opened: action.payload,
+      };
+    case "chat/load/start":
       return {
         ...state,
-        showChat: false
-      }
+        showChat: false,
+      };
     default:
       return state;
   }

@@ -1,0 +1,39 @@
+.fullname {
+  flex: 1;
+}
+.updating-box {
+  display: flex;
+}
+.updating {
+  align-self: center;
+}
+.autorenew-box {
+  margin-right: 3px;
+}
+.autorenew {
+  font-size: 23px;
+  animation: preloading infinite 700ms linear;
+}
+@keyframes preloading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.name-chat {
+  font-weight: 600;
+  margin-right: 8px;
+}
+.name-container {
+  display: flex;
+  justify-content: center;
+}
+.online-chat {
+  width: 8px;
+  height: 8px;
+  align-self: center;
+  border-radius: 100%;
+  background-color: #55c661;
+}

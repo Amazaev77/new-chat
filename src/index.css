@@ -1,15 +1,25 @@
-.icon-search-chat, .setting-span, .clear-input {
+.icon-search-chat,
+.setting-span,
+.clear-input {
   color: #a4b5cc;
   cursor: pointer;
 }
-.icon-search-chat:hover, .setting-span:hover, .clear-input:hover {
+.icon-search-chat:hover,
+.setting-span:hover,
+.clear-input:hover {
   color: #89a3c4;
 }
-.big-avatar, .nickname, .connect, .info-fullname {
+.big-avatar,
+.nickname,
+.connect,
+.info-fullname {
   align-self: center;
 }
-.call:hover, .videocam:hover, .email:hover,
-.instagram:hover .fa-instagram, .twitter:hover .fa-twitter, .facebook:hover .fa-facebook-f {
+.call:hover,
+.videocam:hover,
+.email:hover,
+.instagram:hover .fa-instagram,
+.twitter:hover .fa-twitter,
+.facebook:hover .fa-facebook-f {
   color: #7c98bb;
 }
-

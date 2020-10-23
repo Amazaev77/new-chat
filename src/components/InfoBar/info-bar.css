@@ -1,0 +1,50 @@
+.messengers {
+  border-radius: 4px;
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 -0.1px 5px rgba(194, 191, 191, 0.226);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.instagram,
+.twitter,
+.facebook {
+  cursor: pointer;
+}
+.instagram,
+.twitter {
+  margin-bottom: 25px;
+}
+.social {
+  margin-bottom: 20px;
+}
+.social-block {
+  margin-bottom: 30px;
+}
+.ico {
+  margin-right: 10px;
+  float: left;
+  width: 13px;
+  color: #a7b8ce;
+}
+.info-bar {
+  width: 300px;
+  background-color: #f7f8f9;
+  padding: 60px 25px 0 25px;
+  transition: width .6s ease-in;
+  overflow: hidden;
+}
+.exit {
+  width: 0;
+}
+.enter {
+  width: 0;
+}
+.enter-active {
+  width: 300px;
+}
+.inner-info-bar {
+  width: 300px;
+}
