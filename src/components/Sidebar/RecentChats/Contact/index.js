@@ -1,17 +1,20 @@
 import React from "react";
 import LastMessage from "./LastMessage";
-import moment from "moment";
+import dayjs from "dayjs";
 import "./contact.css";
 import { NavLink } from "react-router-dom";
+import { useSelector } from 'react-redux'
 
 function Contact({ contact }) {
-  const time = moment(contact.lastMessage?.time).format("HH:mm");
+  const time = dayjs(contact.lastMessage?.time).format("HH:mm");
+  const loading = useSelector(state => state.contacts.loading);
+  const contactHover = !loading && "contacthover";
 
   return (
     <NavLink
-      to={`/chat/${contact._id}`}
+      to={`/${contact._id}`}
       activeClassName="bgc-white"
-      className="contact"
+      className={'contact '+ contactHover}
     >
       <div className="avatar">
         {contact?.fullname[0]}

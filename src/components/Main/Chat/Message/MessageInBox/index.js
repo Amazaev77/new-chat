@@ -1,15 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import moment from "moment";
+import dayjs from "dayjs";
 import "./message-in-box.css";
+import { useParams } from 'react-router-dom';
 
 function MessageInBox({ message }) {
-  const opened = useSelector((state) => state.application.opened);
+  const paramsId = useParams().id;
   const userdata = useSelector((state) =>
-    state.contacts.contacts.find((item) => item._id === opened)
+    state.contacts.contacts.find((item) => item._id === paramsId)
   );
-
-  //todo лучше будет заменить момент на дейжс
 
   return (
     <div className="message-in-box">
@@ -17,7 +16,7 @@ function MessageInBox({ message }) {
         <div className="avatar-chat">{userdata.fullname[0]}</div>
         <div className="message-in">
           {message.content}
-          <div className="in-time">{moment(message.time).format("HH:mm")}</div>
+          <div className="in-time">{dayjs(message.time).format("HH:mm")}</div>
         </div>
       </div>
     </div>

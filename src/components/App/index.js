@@ -2,11 +2,10 @@ import React, { useEffect } from "react";
 import { loadContacts } from "../../redux/actions/contacts";
 import { loadProfile } from "../../redux/actions/profile";
 import { Switch, Route } from "react-router-dom";
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import AnimateInfoBar from './AnimateInfoBar';
 import Main from "../Main";
 import Sidebar from "../Sidebar";
-import NoSelected from "./NoSelected";
 import "./app.css";
 
 function App() {
@@ -19,12 +18,13 @@ function App() {
 
   return (
     <div className="app">
-      <Sidebar />
       <Switch>
-        <Route path="/" component={NoSelected} exact />
-        <Route path="/chat/:id" component={Main} />
+        <Route path="/:id?">
+          <Sidebar />
+          <Main />
+          <AnimateInfoBar />
+        </Route>
       </Switch>
-      <AnimateInfoBar />
     </div>
   );
 }

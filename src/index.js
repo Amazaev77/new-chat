@@ -10,7 +10,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 /**
  * TODO
  * независимые блоки отделять переносом строки
- * опциональная связка
  */
 
 ReactDOM.render(

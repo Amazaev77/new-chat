@@ -30,11 +30,16 @@
   color: #a7b8ce;
 }
 .info-bar {
-  width: 300px;
+  width: 330px;
   background-color: #f7f8f9;
-  padding: 60px 25px 0 25px;
-  transition: width .6s ease-in;
+  transition: width .4s ease-in;
+  height: 100vh;
   overflow: hidden;
+  box-sizing: border-box;
+}
+.inner-info-bar {
+  width: 280px;
+  padding: 60px 25px 0 25px;
 }
 .exit {
   width: 0;
@@ -43,8 +48,5 @@
   width: 0;
 }
 .enter-active {
-  width: 300px;
-}
-.inner-info-bar {
-  width: 300px;
+  width: 330px;
 }

@@ -1,18 +1,20 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import "./info-contact.css";
+import { useParams } from 'react-router-dom';
 
 function InfoContact() {
-  const opened = useSelector((state) => state.application.opened);
+  const paramsId = useParams().id;
+
   const userdata = useSelector((state) =>
-    state.contacts.contacts.find((item) => item._id === opened)
+    state.contacts.contacts.find((item) => item._id === paramsId)
   );
 
   return (
     <div className="info-contact">
-      <div className="big-avatar">{userdata && userdata.fullname[0]}</div>
-      <div className="info-fullname">{userdata && userdata.fullname}</div>
-      <div className="nickname">@{userdata && userdata.username}</div>
+      <div className="big-avatar">{userdata?.fullname[0]}</div>
+      <div className="info-fullname">{userdata?.fullname}</div>
+      <div className="nickname">@{userdata?.username}</div>
       <div className="connect">
         <span className="material-icons icons-connect call">call</span>
         <span className="material-icons icons-connect videocam">videocam</span>

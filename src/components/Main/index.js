@@ -5,28 +5,35 @@ import Footer from "./Footer";
 import "./main.css";
 import { useDispatch, useSelector } from "react-redux";
 import { loadChat } from "../../redux/actions/chat";
+import NoSelected from '../App/NoSelected';
+import nodeChat from '../../utils/nodeChat';
+import { useParams } from 'react-router-dom';
 
 // todo один источник истины
 // single truth source
-//todo убрать опенед из стейта редакса
 
 
-function Main({ match }) {
+function Main() {
   const dispatch = useDispatch();
-  //const opened = useSelector((state) => state.application.opened);
 
   const profileId = useSelector((state) => state.profile._id);
-  const chatId = match.params.id;
+  const loading = useSelector(state => state.profile.loading);
 
+  const chatId = useParams().id;
 
   useEffect(() => {
-    dispatch(loadChat(chatId, profileId));
-  }, [chatId, profileId, dispatch]);
+    if(chatId && !loading) {
+      dispatch(loadChat(chatId, profileId));
+      nodeChat();
+    }
+  }, [chatId, profileId, dispatch, loading]);
 
-  const profile = useSelector(state => state.profile.loading);
+  if(!chatId) {
+    return <NoSelected />;
+  }
 
-  if(profile) {
-    return null
+  if(loading) {
+    return null;
   }
 
   return (

@@ -5,12 +5,13 @@ import Micro from "./Micro";
 import Send from "./Send";
 import "./footer.css";
 import { sendMessage } from "../../../redux/actions/chat";
+import { useParams } from 'react-router-dom';
 
 function Footer() {
   const messageLine = useSelector((state) => state.chat.messageLine);
   const myId = useSelector((state) => state.profile._id);
-  const contactId = useSelector((state) => state.application.opened);
   const dispatch = useDispatch();
+  const paramsId = useParams().id;
 
   function handleMessage(e) {
     dispatch(writeMessage(e.target.value));
@@ -23,7 +24,7 @@ function Footer() {
   };
 
   const handleSend = () => {
-    dispatch(sendMessage(myId, contactId, messageLine));
+    dispatch(sendMessage(myId, paramsId, messageLine));
   };
 
   return (

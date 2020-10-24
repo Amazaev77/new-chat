@@ -1,5 +1,5 @@
 import React from "react";
-import moment from "moment";
+import dayjs from "dayjs";
 import "./message-out-box.css";
 
 function MessageOutBox({ message }) {
@@ -7,7 +7,7 @@ function MessageOutBox({ message }) {
     <div className="message-out-box">
       <div className="message-out">{message.content}</div>
       <div className="out-time-box">
-        <span className="out-time">{moment(message.time).format("HH:mm")}</span>
+        <span className="out-time">{dayjs(message.time).format("HH:mm")}</span>
         {message.read ? (
           <span className="check material-icons">done_all</span>
         ) : (

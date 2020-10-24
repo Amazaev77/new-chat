@@ -12,7 +12,6 @@ export function loadChat(id, myId) {
           type: "chat/load/success",
           payload: json,
         });
-        nodeChat();
       });
   };
 }
