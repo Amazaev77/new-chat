@@ -34,7 +34,7 @@ export default function chat(state = initialState, action) {
         ...state,
         searchLine: action.payload,
       };
-      
+
     case "input/clear":
       return {
         ...state,

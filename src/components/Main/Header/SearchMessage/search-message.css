@@ -4,19 +4,6 @@
 .search-message {
   flex: 1;
 }
-.clear-input {
-  font-size: 18px;
-  position: relative;
-  right: 20px;
-  top: 4px;
-}
-.search-message-input {
-  border: 0;
-  outline: none;
-  box-shadow: 0 -0.1px 5px rgba(194, 191, 191, 0.384);
-  padding: 4px 0 4px 22px;
-  width: 230px;
-}
 .icon-search-chat {
   position: absolute;
   font-size: 22px;

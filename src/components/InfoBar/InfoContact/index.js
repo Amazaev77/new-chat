@@ -1,13 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import "./info-contact.css";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 function InfoContact() {
   const paramsId = useParams().id;
 
   const userdata = useSelector((state) =>
-    state.contacts.contacts.find((item) => item._id === paramsId)
+    state.contacts.items.find((item) => item._id === paramsId)
   );
 
   return (

@@ -7,7 +7,7 @@ function SearchContact() {
   const enteredText = useSelector((state) => state.contacts.enteredText);
   const dispatch = useDispatch();
 
-  function handleChange(e) {
+  const searchChangeHandler = (e) => {
     dispatch(setSearchContact(e.target.value));
   }
 
@@ -17,7 +17,7 @@ function SearchContact() {
         className="input-search-contact"
         placeholder="Search contact"
         value={enteredText}
-        onChange={handleChange}
+        onChange={searchChangeHandler}
       />
       <span className="icon-search-sidebar material-icons">search</span>
     </div>

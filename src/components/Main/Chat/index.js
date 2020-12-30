@@ -8,7 +8,8 @@ function Chat() {
     const enteredText = state.chat.searchLine;
 
     return state.chat.messages.filter(
-      (item) => item.content.toLowerCase().indexOf(enteredText.toLowerCase()) !== -1
+      (item) =>
+        item.content.toLowerCase().indexOf(enteredText.toLowerCase()) !== -1
     );
   });
 
@@ -21,8 +22,8 @@ function Chat() {
   return (
     <div className="chat">
       {messages.map((item) => (
-        <div className="message">
-          <Message key={item._id} message={item} />
+        <div key={item._id} className="message">
+          <Message message={item} />
         </div>
       ))}
     </div>

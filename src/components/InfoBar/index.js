@@ -2,13 +2,13 @@ import React from "react";
 import InfoContact from "./InfoContact";
 import { useSelector } from "react-redux";
 import "./info-bar.css";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 function InfoBar() {
   const paramsId = useParams().id;
 
   const userdata = useSelector((state) =>
-    state.contacts.contacts.find((item) => item._id === paramsId)
+    state.contacts.items.find((item) => item._id === paramsId)
   );
   return (
     <div className="info-bar">

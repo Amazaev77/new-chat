@@ -12,6 +12,7 @@ export function loadContacts() {
       });
   };
 }
+
 export function setSearchContact(string) {
   return {
     type: "contact/search/set",

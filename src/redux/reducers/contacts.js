@@ -1,6 +1,6 @@
 const initialState = {
   loading: true,
-  contacts: [],
+  items: [],
   enteredText: "",
 };
 
@@ -15,7 +15,7 @@ export default function contacts(state = initialState, action) {
       return {
         ...state,
         loading: false,
-        contacts: action.payload,
+        items: action.payload,
       };
     case "contact/search/set":
       return {

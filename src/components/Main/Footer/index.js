@@ -5,7 +5,7 @@ import Micro from "./Micro";
 import Send from "./Send";
 import "./footer.css";
 import { sendMessage } from "../../../redux/actions/chat";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 function Footer() {
   const messageLine = useSelector((state) => state.chat.messageLine);

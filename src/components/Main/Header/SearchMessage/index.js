@@ -1,35 +1,21 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-
+import { useDispatch } from "react-redux";
 import "./search-message.css";
-import { clearInput, setSearchLine, showSearchInput } from '../../../../redux/actions/chat';
+import { showSearchInput } from "../../../../redux/actions/chat";
+import InputBox from "./InputBox";
 
 function SearchMessage() {
-  const showSearch = useSelector((state) => state.chat.showSearch);
-  const searchLine = useSelector((state) => state.chat.searchLine);
-
   const dispatch = useDispatch();
+
   const handleSearch = () => dispatch(showSearchInput());
-  const handleString = (e) => dispatch(setSearchLine(e.target.value));
-  const handleClear = () => dispatch(clearInput());
+
   return (
     <div className="search-message">
       <span className="icon-search-chat material-icons" onClick={handleSearch}>
         search
       </span>
       <div className="header-input-container">
-        {showSearch && (
-          <input
-            className="search-message-input"
-            onChange={handleString}
-            value={searchLine}
-          />
-        )}
-        {searchLine.length !== 0 && (
-          <span className="clear-input material-icons" onClick={handleClear}>
-            close
-          </span>
-        )}
+        <InputBox />
       </div>
     </div>
   );

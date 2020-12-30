@@ -12,6 +12,7 @@ const rootReducer = combineReducers({
   chat,
   application,
 });
+
 const logger = createLogger({
   collapsed: true,
   diff: true,

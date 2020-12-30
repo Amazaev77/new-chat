@@ -7,11 +7,6 @@ import "./index.css";
 import "normalize.css";
 import { BrowserRouter as Router } from "react-router-dom";
 
-/**
- * TODO
- * независимые блоки отделять переносом строки
- */
-
 ReactDOM.render(
   <Provider store={store}>
     <Router>

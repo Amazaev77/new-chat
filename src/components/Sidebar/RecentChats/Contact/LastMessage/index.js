@@ -2,7 +2,7 @@ import React from "react";
 import "./last-message.css";
 
 function LastMessage({ lastMessage }) {
-  if (lastMessage === undefined) {
+  if (!lastMessage) {
     return null;
   }
 

@@ -1,0 +1,10 @@
+.online-contact {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #55c661;
+  position: relative;
+  border: 1px solid #fff;
+  left: 30px;
+  bottom: 38px;
+}

@@ -1,14 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import "./fullname.css";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 
 function Fullname() {
   const loading = useSelector((state) => state.chat.loading);
 
   const paramsId = useParams().id;
   const userdata = useSelector((state) =>
-    state.contacts.contacts.find((item) => item._id === paramsId)
+    state.contacts.items.find((item) => item._id === paramsId)
   );
 
   return (
@@ -23,10 +23,10 @@ function Fullname() {
               <div className="updating">Updating...</div>
             </div>
           ) : (
-             userdata?.fullname
+            userdata?.fullname
           )}
         </div>
-        { userdata?.online && <div className="online-chat"></div>}
+        {userdata?.online && <div className="online-chat"></div>}
       </div>
     </div>
   );

@@ -1,7 +1,34 @@
 .setting {
   flex: 1.1;
   text-align: end;
+  transition: 1s all;
 }
 .setting-span {
   font-size: 24px;
+}
+
+.setting-rotate-back {
+  animation: rotate-back 1 500ms linear forwards;
+}
+
+.setting-rotate {
+  animation: rotate 1 350ms linear forwards;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(60deg);
+  }
+}
+
+@keyframes rotate-back {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-120deg);
+  }
 }
