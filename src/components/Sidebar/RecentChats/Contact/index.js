@@ -5,6 +5,7 @@ import "./contact.css";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ContactOnline from "./ContactOnline";
+import PropTypes from 'prop-types';
 
 function Contact({ contact }) {
   const time = dayjs(contact.lastMessage?.time).format("HH:mm");
@@ -31,4 +32,9 @@ function Contact({ contact }) {
     </NavLink>
   );
 }
+
+Contact.propTypes = {
+  contact: PropTypes.object
+}
+
 export default Contact;

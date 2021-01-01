@@ -20,13 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e142117-d9ba-4b17-97a8-9ea584b782bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/main/chat/Chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/main/chat/Chat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sidebar/contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sidebar/contact/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sidebar/recent-chats/RecentChats.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/sidebar/recent-chats/RecentChats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sidebar/recent-chats/recent-chats.css" beforeDir="false" afterPath="$PROJECT_DIR$/components/sidebar/recent-chats/recent-chats.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/actions/chat.js" beforeDir="false" afterPath="$PROJECT_DIR$/redux/actions/chat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/InfoBar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/InfoBar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Main/Header/Setting/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Main/Header/Setting/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Sidebar/RecentChats/Contact/ContactOnline/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Sidebar/RecentChats/Contact/ContactOnline/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Sidebar/RecentChats/Contact/LastMessage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Sidebar/RecentChats/Contact/LastMessage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Sidebar/RecentChats/Contact/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Sidebar/RecentChats/Contact/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Sidebar/RecentChats/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Sidebar/RecentChats/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +44,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -60,6 +60,7 @@
       <workItem from="1600968410690" duration="1544000" />
       <workItem from="1600969968396" duration="96000" />
       <workItem from="1601111665801" duration="7000" />
+      <workItem from="1609515931077" duration="376000" />
     </task>
     <servers />
   </component>
@@ -77,5 +78,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="974" y="400" key="FileChooserDialogImpl" timestamp="1609516305071">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="974" y="400" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609516305071" />
   </component>
 </project>

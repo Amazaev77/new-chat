@@ -1,5 +1,6 @@
 import React from "react";
 import "./last-message.css";
+import PropTypes from 'prop-types';
 
 function LastMessage({ lastMessage }) {
   if (!lastMessage) {
@@ -13,6 +14,10 @@ function LastMessage({ lastMessage }) {
         : lastMessage.content}
     </div>
   );
+}
+
+LastMessage.propTypes = {
+  lastMessage: PropTypes.object
 }
 
 export default LastMessage;

@@ -15,7 +15,6 @@ function RecentChats() {
         contact.fullname.toLowerCase().indexOf(enteredText.toLowerCase()) !== -1
     );
   });
-  console.log(contacts)
 
   const preloader = new Array(7)
     .fill()

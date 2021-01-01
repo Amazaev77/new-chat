@@ -6,8 +6,11 @@ import "./setting.css";
 
 function Setting() {
   const dispatch = useDispatch();
+
   const [animate, setAnimate] = useState(null);
+
   const showBar = useSelector(state => state.chat.showBar);
+
   const handleShow = () => {
     if (showBar) {
       setAnimate('setting-rotate');
