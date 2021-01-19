@@ -32,3 +32,18 @@
     transform: rotate(-120deg);
   }
 }
+
+.github {
+  font-size: 21px;
+  color: #94a6be;
+}
+
+.github:hover {
+  color: #454e60;
+}
+
+.github-link {
+  position: relative;
+  left: -10px;
+  top: -3px;
+}
