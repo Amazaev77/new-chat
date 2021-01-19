@@ -13,5 +13,5 @@
    * react-loading-skeleton
    * react hooks / redux-logger / react-hotkeys-hook / normalize.css / dayjs
    
-   ### Команды для запуска: `git clone` > `npm install` > `npm start` .
+   ### Команда для запуска: `npm start` .
   
