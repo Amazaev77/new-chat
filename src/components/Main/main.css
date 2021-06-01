@@ -4,11 +4,12 @@
 .inner-main {
   display: flex;
   padding: 0 45px;
-  overflow-y: scroll;
   flex-direction: column;
   height: 100vh;
+  overflow-y: scroll;
   justify-content: space-between;
 }
+
 .inner-main::-webkit-scrollbar {
   width: 0;
 }
