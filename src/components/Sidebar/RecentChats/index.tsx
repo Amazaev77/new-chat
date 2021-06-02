@@ -3,20 +3,27 @@ import Contact from './Contact'
 import PreloaderContact from './PreloaderContact'
 import './recent-chats.css'
 import { useTypedSelector } from '../../../hooks/useTypedSelector'
+import { createSelector } from 'reselect'
+import { RootState } from "../../../redux";
 
-const RecentChats: React.FC = () => {
-  const loading = useTypedSelector(state => state.contacts.loading)
+const getContacts = createSelector(
+  (state: RootState) => state.contacts,
+  (contacts) => {
+    const searchContactValue = contacts.searchContactValue
 
-  const contacts = useTypedSelector(state => {
-    const searchContactValue = state.contacts.searchContactValue
-
-    return state.contacts.items.filter(
-      contact =>
+    return contacts.items.filter(
+      (contact) =>
         contact.fullname
           .toLowerCase()
           .indexOf(searchContactValue.toLowerCase()) !== -1
     )
-  })
+  }
+)
+
+const RecentChats: React.FC = () => {
+  const loading = useTypedSelector(state => state.contacts.loading)
+
+  const contacts = useTypedSelector(getContacts)
 
   const preloader = new Array(7)
     .fill('')

@@ -9,7 +9,7 @@ export function loadProfile() {
 
     const res = await fetch(api)
     const profile = await res.json()
-    console.log(profile)
+
     dispatch({
       type: ProfileActionTypes.LOAD_PROFILE_SUCCEEDED,
       payload: profile,

@@ -2,17 +2,24 @@ import React, { useEffect, useRef } from 'react'
 import Message from './Message'
 import './chat.css'
 import { useTypedSelector } from '../../../hooks/useTypedSelector'
+import { createSelector } from 'reselect'
+import {RootState} from "../../../redux";
+
+const getMessages = createSelector(
+  (state: RootState) => state.messages,
+  (messages) => {
+    const searchMessageValue = messages.searchMessageValue
+
+    return messages.messages.filter(
+      item =>
+        item.content.toLowerCase()
+          .indexOf(searchMessageValue.toLowerCase()) !== -1
+    )
+  }
+)
 
 const Chat: React.FC = () => {
-  const messages = useTypedSelector(state => {
-    const searchMessageValue = state.messages.searchMessageValue
-
-    return state.messages.messages.filter(
-      item =>
-        item.content.toLowerCase().indexOf(searchMessageValue.toLowerCase()) !==
-        -1
-    )
-  })
+  const messages = useTypedSelector(getMessages)
 
   const loading = useTypedSelector(state => state.messages.loading)
 
