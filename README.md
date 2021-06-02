@@ -5,7 +5,7 @@
 
 ## При разработке React приложения использовал
 
-- typescript
+- typescript / reselect
 - redux, redux-thunk - чтобы создавать асинхронные экшены
 - react-router-dom - для роутинга
 - react-transition-group - библиотека для анимаций
