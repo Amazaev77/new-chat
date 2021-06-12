@@ -13,4 +13,12 @@
 - react-loading-skeleton
 - react hooks / redux-logger / react-hotkeys-hook / normalize.css / dayjs
 
-### Команда для запуска: `npm start` .
+### Команда для запуска: 
+
+```
+- git clone ...
+- cd new-chat && npm install
+- npm start
+```
+
+#### Деплой на Firebase
