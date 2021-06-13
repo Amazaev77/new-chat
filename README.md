@@ -5,11 +5,12 @@
 
 ## При разработке React приложения использовал
 
-- typescript / reselect
-- redux, redux-thunk - чтобы создавать асинхронные экшены
+- typescript / redux, redux-thunk - чтобы создавать асинхронные экшены
 - react-router-dom - для роутинга
 - react-transition-group - библиотека для анимаций
 - REST API, асинхронные запросы
+- axios
+- reselect
 - react-loading-skeleton
 - react hooks / redux-logger / react-hotkeys-hook / normalize.css / dayjs
 

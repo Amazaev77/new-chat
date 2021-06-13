@@ -18,6 +18,7 @@
     "@types/redux-logger": "^3.0.8",
     "@types/redux-thunk": "^2.1.0",
     "@types/reselect": "^2.2.0",
+    "axios": "^0.21.1",
     "dayjs": "^1.9.4",
     "normalize.css": "^8.0.1",
     "react": "^16.13.1",

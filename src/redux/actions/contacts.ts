@@ -1,5 +1,6 @@
 import { ContactAction, ContactsActionTypes } from '../types/contacts'
 import { Dispatch } from 'redux'
+import axios from "axios";
 
 export function loadContacts() {
   return async (dispatch: Dispatch<ContactAction>) => {
@@ -7,9 +8,7 @@ export function loadContacts() {
 
     const api = 'https://api.intocode.ru:8001/api/contacts'
 
-    const response = await fetch(api)
-
-    const contacts = await response.json()
+    const { data: contacts } = await axios.get(api)
 
     dispatch({
       type: ContactsActionTypes.LOAD_CONTACTS_SUCCEEDED,

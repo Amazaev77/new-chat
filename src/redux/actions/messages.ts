@@ -1,5 +1,6 @@
 import { MessageAction, MessagesActionTypes } from '../types/messages'
 import { Dispatch } from 'redux'
+import axios from "axios";
 
 type idType = number | string | null
 
@@ -9,8 +10,7 @@ export function fetchMessages(id: idType, myId: idType) {
 
     const api = 'https://api.intocode.ru:8001/api/messages'
 
-    const response = await fetch(`${api}/${myId}/${id}`)
-    const messages = await response.json()
+    const { data: messages } = await axios.get(`${api}/${myId}/${id}`)
 
     dispatch({
       type: MessagesActionTypes.LOAD_MESSAGES_SUCCEEDED,
@@ -51,16 +51,9 @@ export function sendMessage(myId: idType, contactId: idType, content: string) {
 
     const api = 'https://api.intocode.ru:8001/api/messages'
 
-    const response = await fetch(api, {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ myId, contactId, content, type: 'text' }),
-    })
+    const body = { myId, contactId, content, type: 'text' }
 
-    const message = await response.json()
+    const { data: message } = await axios.post(api, body)
 
     dispatch({
       type: MessagesActionTypes.SEND_MESSAGE_SUCCEEDED,
