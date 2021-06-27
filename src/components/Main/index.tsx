@@ -7,7 +7,7 @@ import Header from './Header'
 import Chat from './Chat'
 import Footer from './Footer'
 import NoSelected from '../App/NoSelected'
-import './main.css'
+import './main.less'
 
 const Main: React.FC = () => {
   const dispatch = useDispatch()

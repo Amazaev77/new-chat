@@ -1,5 +1,5 @@
 import React from 'react'
-import './no-selected.css'
+import './no-selected.less'
 
 const NoSelected: React.FC = () => {
   return (

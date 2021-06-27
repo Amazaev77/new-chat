@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useTypedSelector } from '../../hooks/useTypedSelector'
 import InfoContact from './InfoContact'
-import './info-bar.css'
+import './info-bar.less'
 
 const InfoSideBar: React.FC = () => {
   const { id: paramsId } = useParams<{ id: string }>()

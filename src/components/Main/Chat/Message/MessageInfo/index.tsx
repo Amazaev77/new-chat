@@ -1,5 +1,5 @@
 import React from 'react'
-import './message-info.css'
+import './message-info.less'
 import { MessageType } from '../index'
 
 type PropsType = {

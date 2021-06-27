@@ -1,6 +1,6 @@
 import React from 'react'
 import dayjs from 'dayjs'
-import './message-in-box.css'
+import './message-in-box.less'
 import { useParams } from 'react-router-dom'
 import { useTypedSelector } from '../../../../../hooks/useTypedSelector'
 import { MessageType } from '../index'
@@ -17,8 +17,8 @@ const MessageInBox: React.FC<PropsType> = ({ message }) => {
   )
 
   return (
-    <div className="message-in-box">
-      <div className="inner-message-in">
+    <div>
+      <div className="message-in-block">
         <div className="avatar-chat">{userdata.fullname[0]}</div>
         <div className="message-in">
           {message.content}

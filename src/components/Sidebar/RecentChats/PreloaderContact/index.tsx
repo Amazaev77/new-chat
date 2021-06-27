@@ -1,6 +1,6 @@
 import React from 'react'
 import Skeleton from 'react-loading-skeleton'
-import './preloader-contact.css'
+import './preloader-contact.less'
 
 const PreloaderContact: React.FC = () => {
   return (

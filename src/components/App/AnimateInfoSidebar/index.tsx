@@ -9,7 +9,7 @@ const AnimateInfoSidebar: React.FC = () => {
   )
 
   return (
-    <CSSTransition in={showInfoSidebar} timeout={500} unmountOnExit>
+    <CSSTransition in={showInfoSidebar} timeout={470} unmountOnExit>
       <InfoSidebar />
     </CSSTransition>
   )

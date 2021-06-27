@@ -2,7 +2,7 @@ import React from 'react'
 import MessageInBox from './MessageInBox'
 import MessageOutBox from './MessageOutBox'
 import MessageInfo from './MessageInfo'
-import './message.css'
+import './message.less'
 import { useTypedSelector } from '../../../../hooks/useTypedSelector'
 
 export type MessageType = {

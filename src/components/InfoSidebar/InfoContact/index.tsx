@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useTypedSelector } from '../../../hooks/useTypedSelector'
-import './info-contact.css'
+import './info-contact.less'
 
 const InfoContact: React.FC = () => {
   const { id: paramsId } = useParams<{ id: string }>()

@@ -1,6 +1,6 @@
 import React from 'react'
 import dayjs from 'dayjs'
-import './message-out-box.css'
+import './message-out-box.less'
 import { MessageType } from '../index'
 
 type PropsType = {
@@ -9,7 +9,7 @@ type PropsType = {
 
 const MessageOutBox: React.FC<PropsType> = ({ message }) => {
   return (
-    <div className="message-out-box">
+    <div className="message-out-block">
       <div className="message-out">{message.content}</div>
       <div className="out-time-box">
         <span className="out-time">{dayjs(message.time).format('HH:mm')}</span>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { showInfoSidebarSwitch } from '../../../../redux/actions/messages'
 import { useDispatch } from 'react-redux'
 import { useHotkeys } from 'react-hotkeys-hook'
-import './setting.css'
+import './setting.less'
 import { useTypedSelector } from '../../../../hooks/useTypedSelector'
 
 const Setting: React.FC = () => {
@@ -28,7 +28,7 @@ const Setting: React.FC = () => {
   return (
     <div className="setting">
       <a className="github-link" href="https://github.com/Amazaev77/new-chat">
-        <i className="github fab fa-github" />
+        <i className="fab fa-github" />
       </a>
       <span
         className={`setting-span material-icons ${animate}`}

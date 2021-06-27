@@ -2,7 +2,7 @@ import React from 'react'
 import SearchMessage from './SearchMessage'
 import Setting from './Setting'
 import FullName from './FullName'
-import './header.css'
+import './header.less'
 
 const Header: React.FC = () => {
   return (

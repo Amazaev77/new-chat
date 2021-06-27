@@ -1,7 +1,7 @@
 import React from 'react'
 import Contact from './Contact'
 import PreloaderContact from './PreloaderContact'
-import './recent-chats.css'
+import './recent-chats.less'
 import { useTypedSelector } from '../../../hooks/useTypedSelector'
 import { createSelector } from 'reselect'
 import { RootState } from "../../../redux";

@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux'
 import AnimateInfoSidebar from './AnimateInfoSidebar'
 import Main from '../Main'
 import Sidebar from '../Sidebar'
-import './app.css'
+import './app.less'
 
 const App: React.FC = () => {
   const dispatch = useDispatch()

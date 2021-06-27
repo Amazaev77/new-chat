@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import Message from './Message'
-import './chat.css'
+import './chat.less'
 import { useTypedSelector } from '../../../hooks/useTypedSelector'
 import { createSelector } from 'reselect'
-import {RootState} from "../../../redux";
+import { RootState } from "../../../redux";
 
 const getMessages = createSelector(
   (state: RootState) => state.messages,

@@ -1,5 +1,5 @@
 import React from 'react'
-import './fullname.css'
+import './fullname.less'
 import { useParams } from 'react-router-dom'
 import { useTypedSelector } from '../../../../hooks/useTypedSelector'
 
@@ -18,8 +18,8 @@ const FullName: React.FC = () => {
         <div className="name-chat">
           {loading ? (
             <div className="updating-box">
-              <div className="autorenew-box">
-                <span className="autorenew material-icons">autorenew</span>
+              <div>
+                <span className="material-icons">autorenew</span>
               </div>
               <div className="updating">Updating...</div>
             </div>

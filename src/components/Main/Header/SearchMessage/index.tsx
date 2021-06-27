@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import './search-message.css'
+import './search-message.less'
 import { showSearchInput } from '../../../../redux/actions/messages'
 import InputBox from './InputBox'
 

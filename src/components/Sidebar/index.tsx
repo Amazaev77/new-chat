@@ -1,12 +1,12 @@
 import React from 'react'
 import RecentChats from './RecentChats'
 import SearchContact from './SearchContact'
-import './sidebar.css'
+import './sidebar.less'
 
 const Sidebar: React.FC = () => {
   return (
     <div className="sidebar">
-      <div className="inner">
+      <div>
         <SearchContact />
         <RecentChats />
       </div>

@@ -2,9 +2,21 @@
   flex: 1.1;
   text-align: end;
   transition: 1s all;
-}
-.setting-span {
-  font-size: 24px;
+  .github-link {
+    position: relative;
+    left: -10px;
+    top: -3px;
+    i {
+      font-size: 21px;
+      color: #94a6be;
+      &:hover {
+        color: #454e60;
+      }
+    }
+  }
+  span {
+    font-size: 24px;
+  }
 }
 
 .setting-rotate-back {
@@ -33,17 +45,3 @@
   }
 }
 
-.github {
-  font-size: 21px;
-  color: #94a6be;
-}
-
-.github:hover {
-  color: #454e60;
-}
-
-.github-link {
-  position: relative;
-  left: -10px;
-  top: -3px;
-}

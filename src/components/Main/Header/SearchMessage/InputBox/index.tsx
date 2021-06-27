@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from 'react'
-import './input-box.css'
+import './input-box.less'
 import { useDispatch } from 'react-redux'
 import {
   clearInput,

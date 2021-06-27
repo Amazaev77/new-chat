@@ -1,7 +1,7 @@
 import React from 'react'
 import LastMessage from './LastMessage'
 import dayjs from 'dayjs'
-import './contact.css'
+import './contact.less'
 import { NavLink } from 'react-router-dom'
 import ContactOnline from './ContactOnline'
 import { useTypedSelector } from '../../../../hooks/useTypedSelector'

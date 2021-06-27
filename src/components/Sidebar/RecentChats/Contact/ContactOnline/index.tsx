@@ -1,5 +1,5 @@
 import React from 'react'
-import './contactOnline.css'
+import './contactOnline.less'
 
 type PropsType = {
   online: boolean

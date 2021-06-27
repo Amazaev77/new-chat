@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from 'react'
 import { useDispatch } from 'react-redux'
 import { setSearchContactValue } from '../../../redux/actions/contacts'
-import './search-contact.css'
+import './search-contact.less'
 import { useTypedSelector } from '../../../hooks/useTypedSelector'
 
 const SearchContact: React.FC = () => {

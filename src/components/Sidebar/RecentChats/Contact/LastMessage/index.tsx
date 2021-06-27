@@ -1,5 +1,5 @@
 import React from 'react'
-import './last-message.css'
+import './last-message.less'
 import { LastMessageType } from '../index'
 
 type PropsType = {
